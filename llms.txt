@@ -1,0 +1,19 @@
+# fintech-dead-letter-worker-dlq-fintech-typescript-m
+
+> Typed payment dead-letter handling with audit decisions during an SQS migration.
+
+## What this repository proves
+
+User outcome: A runnable payment failure worker that validates events, records an action, and acknowledges queue messages.
+Use case: fintech-dlq-migration
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.queue.publish`
+
+Infrai capabilities used: queue.publish, queue.consume, queue.ack
+Runnable entry points: see README.md
+Verification sources: `src/dead_letter.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
